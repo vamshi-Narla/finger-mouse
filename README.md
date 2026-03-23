@@ -39,9 +39,8 @@ python finger_mouse.py
 
 ⚠️ Important Note
 
-Download the model file manually:
-
-hand_landmarker.task
+Download the model file from:
+https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task
 
 Place it in the same folder as the Python file.
 
