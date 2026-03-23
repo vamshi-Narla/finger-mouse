@@ -1,2 +1,74 @@
-# finger-mouse
-A gesture-controlled virtual mouse using computer vision that allows cursor movement, clicking, and holding actions with hand gestures.
+# 🖐️ Finger Mouse (Virtual Mouse using Hand Gestures)
+
+A gesture-controlled virtual mouse that allows users to control cursor movement, clicking, and holding actions using real-time hand gestures with computer vision.
+
+---
+
+🚀 Features
+
+* Move cursor using index finger
+* Click using thumb + middle finger
+* Hold mouse using all 5 fingers
+* Smooth and real-time tracking
+* Works with webcam
+
+---
+
+🛠️ Technologies Used
+
+* Python
+* OpenCV
+* MediaPipe
+* PyAutoGUI
+
+---
+
+📦 Installation
+
+Install required libraries:
+
+pip install opencv-python mediapipe pyautogui
+
+---
+
+▶️ How to Run
+
+python finger_mouse.py
+
+---
+
+⚠️ Important Note
+
+Download the model file manually:
+
+hand_landmarker.task
+
+Place it in the same folder as the Python file.
+
+---
+
+🎮 Controls
+
+* Index Finger → Move Cursor
+* Thumb + Middle Finger → Click
+* All 5 Fingers → Mouse Hold
+
+---
+
+📌 Future Improvements
+
+* Right-click gesture
+* Scroll functionality
+* Improved accuracy
+
+---
+
+💼 Author
+
+Narla Vamshi
+
+---
+
+⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
