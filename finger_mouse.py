@@ -288,6 +288,11 @@ class FingerMouse:
                         except Exception:
                             pass
 
+                # --- NEW SCROLL LOGIC ---
+                if smooth_states["index"] and smooth_states["middle"]:
+                    pyautogui.scroll(50)
+                # -------------------------
+
                 # Compute movement
                 dx_pixels, dy_pixels, status = self.compute_velocity(idx.x, idx.y, dt)
 
