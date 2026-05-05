@@ -66,6 +66,7 @@ class FingerMouse:
                 print("Download complete.")
             except Exception as e:
                 raise RuntimeError(f"Failed to download model file: {e}")
+
         base_options = python.BaseOptions(model_asset_path=MODEL_PATH)
         options = vision.HandLandmarkerOptions(
             base_options=base_options,
