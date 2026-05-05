@@ -3,7 +3,11 @@ import mediapipe as mp
 import pyautogui
 import time
 from collections import deque
+import os
+import urllib.request
 
+MODEL_URL = "https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task"
+MODEL_PATH = "hand_landmarker.task"
 from mediapipe.tasks import python
 from mediapipe.tasks.python import vision
 
@@ -55,7 +59,15 @@ class FingerMouse:
         }
 
         # Load model
-        base_options = python.BaseOptions(model_asset_path="hand_landmarker.task")
+        if not os.path.exists(MODEL_PATH):
+            print("Model file not found. Downloading...")
+            try:
+                urllib.request.urlretrieve(MODEL_URL, MODEL_PATH)
+                print("Download complete.")
+            except Exception as e:
+                raise RuntimeError(f"Failed to download model file: {e}")
+
+        base_options = python.BaseOptions(model_asset_path=MODEL_PATH)
         options = vision.HandLandmarkerOptions(
             base_options=base_options,
             running_mode=vision.RunningMode.VIDEO,
