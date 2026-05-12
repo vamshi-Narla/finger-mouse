@@ -1,3 +1,5 @@
+
+
 # 🖐️ Finger Mouse (Virtual Mouse using Hand Gestures)
 
 A gesture-controlled virtual mouse that allows users to control cursor movement, clicking, and holding actions using real-time hand gestures with computer vision.
@@ -71,3 +73,7 @@ Narla Vamshi
 ⭐ Support
 
 If you like this project, give it a ⭐ on GitHub!
+
+### 🔧 Troubleshooting
+If you see an error about `hand_landmarker.task`, run this command in your terminal:
+curl -o hand_landmarker.task https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task
